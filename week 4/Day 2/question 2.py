@@ -1,11 +1,12 @@
 s=input("enter a string")
 d=""
-print("frequency of each character:")
 for i in s:
     if i not in d:
         count=0
         for j in s:
             if i==j:
                 count+=1
-        print(i,"=",count)
+        if count!=1:
+            print("first repeating character is ",i)
+            break
         d+=i
